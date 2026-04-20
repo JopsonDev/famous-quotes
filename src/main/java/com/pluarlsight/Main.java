@@ -39,5 +39,6 @@ public class Main {
                 isDone = true;
             }
         }
+        System.out.println("Thanks for playing!");
     }
 }
