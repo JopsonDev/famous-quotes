@@ -23,7 +23,7 @@ public class Main {
             int numberInput;
             try {
                 if (input.equalsIgnoreCase("r")){
-                    numberInput = (int)(Math.random() * (10 - 1 + 1)) + 1;
+                    numberInput = (int)(Math.random() * (quotes.length - 1 + 1)) + 1;
                 } else {
                     numberInput = Integer.parseInt(input);
                     numberInput--;
