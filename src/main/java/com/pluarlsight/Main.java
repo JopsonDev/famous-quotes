@@ -15,13 +15,21 @@ public class Main {
                 "You miss 100% of the shots you don’t take.",
                 "Act as if what you do makes a difference. It does.",
                 "Hardships often prepare ordinary people for an extraordinary destiny."};
-        System.out.print("Play Quote Me: Pick a Number 1 to 10 -> ");
-        int input = scanner.nextInt();
-        scanner.nextLine();
-        try {
-            System.out.println(quotes[input]);
-        } catch(Exception A) {
-            System.out.println("Whoa bud that numbers not going to work");
+        boolean isDone = false;
+        while (!isDone) {
+            System.out.print("Play Quote Me: Pick a Number 1 to 10 -> ");
+            int input = scanner.nextInt();
+            scanner.nextLine();
+            try {
+                System.out.println(quotes[input]);
+            } catch (Exception A) {
+                System.out.println("Whoa bud that numbers not going to work");
+            }
+            System.out.println("Want another quote? Y or N: ");
+            String answer = scanner.nextLine();
+            if (answer.equalsIgnoreCase("N")){
+                isDone = true;
+            }
         }
     }
 }
