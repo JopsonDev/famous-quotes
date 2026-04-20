@@ -18,6 +18,10 @@ public class Main {
         System.out.print("Play Quote Me: Pick a Number 1 to 10 -> ");
         int input = scanner.nextInt();
         scanner.nextLine();
-        System.out.println(quotes[input]);
+        try {
+            System.out.println(quotes[input]);
+        } catch(Exception A) {
+            System.out.println("Whoa bud that numbers not going to work");
+        }
     }
 }
