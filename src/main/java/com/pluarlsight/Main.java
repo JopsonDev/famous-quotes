@@ -29,14 +29,13 @@ public class Main {
                     numberInput--;
                 }
                 System.out.println(quotes[numberInput]);
-            } catch (Exception A) {
-                System.out.println("Whoa bud that numbers not going to work");
-            }
             System.out.println("Want another quote? Y or N: ");
             answer = scanner.nextLine();
-
             if (answer.equalsIgnoreCase("N")){
-                isDone = true;
+                    isDone = true;
+                }
+            } catch (Exception A) {
+            System.out.println("Whoa bud that numbers not going to work");
             }
         }
         System.out.println("Thanks for playing!");
