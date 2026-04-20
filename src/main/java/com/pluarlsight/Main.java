@@ -17,16 +17,24 @@ public class Main {
                 "Hardships often prepare ordinary people for an extraordinary destiny."};
         boolean isDone = false;
         while (!isDone) {
-            System.out.print("Play Quote Me: Pick a Number 1 to 10 -> ");
-            int input = scanner.nextInt();
-            scanner.nextLine();
+            System.out.print("Play Quote Me:\nPick a Number 1 to 10\nYou can also enter R for random -> ");
+            String input = scanner.nextLine();
+            String answer;
+            int numberInput;
             try {
-                System.out.println(quotes[input]);
+                if (input.equalsIgnoreCase("r")){
+                    numberInput = (int)(Math.random() * (10 - 1 + 1)) + 1;
+                } else {
+                    numberInput = Integer.parseInt(input);
+                    numberInput--;
+                }
+                System.out.println(quotes[numberInput]);
             } catch (Exception A) {
                 System.out.println("Whoa bud that numbers not going to work");
             }
             System.out.println("Want another quote? Y or N: ");
-            String answer = scanner.nextLine();
+            answer = scanner.nextLine();
+
             if (answer.equalsIgnoreCase("N")){
                 isDone = true;
             }
