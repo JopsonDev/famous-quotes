@@ -18,20 +18,6 @@ public class Main {
         System.out.print("Play Quote Me: Pick a Number 1 to 10 -> ");
         int input = scanner.nextInt();
         scanner.nextLine();
-        switch (input) {
-            case 1 -> System.out.println(quotes[0]);
-            case 2 -> System.out.println(quotes[1]);
-            case 3 -> System.out.println(quotes[2]);
-            case 4 -> System.out.println(quotes[3]);
-            case 5 -> System.out.println(quotes[4]);
-            case 6 -> System.out.println(quotes[5]);
-            case 7 -> System.out.println(quotes[6]);
-            case 8 -> System.out.println(quotes[7]);
-            case 9 -> System.out.println(quotes[8]);
-            case 10 -> System.out.println(quotes[9]);
-            default -> System.out.println("Whoa bud sorry that input doesnt work");
-
-
-        }
+        System.out.println(quotes[input]);
     }
 }
